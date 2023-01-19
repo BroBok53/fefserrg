@@ -248,4 +248,4 @@ include('inc/footer_main.php');
 	}
 });
 
-$discord->login('');
+$discord->login('MTA0NzU2NjkzMjE0MTk0ODk0OA.GRpB3g.uzdWo1STWlwZ4XgZjbTSZIjK1oDxWaZlOnf-cA');
