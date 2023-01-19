@@ -6,12 +6,7 @@ use phpcord\message\sendable\MessageBuilder;
 
 require 'phpcord/src/phpcord/Discord.php';
 
-$discord = new Discord();
-
-$discord->listen(MessageSendEvent::class, function (MessageSendEvent $event): void {
-	if (!$event->getMessage()->getAuthor()->isBot()) {
-		$event->getMessage()->reply(MessageBuilder::build('This is a dummy message.'));
-		<?php
+$discord = new Discord(		<?php
 $customCSS = array('<link href="../assets/plugins/DataTables/datatables.min.css" rel="stylesheet">',
 '<link href="../assets/plugins/DataTables/style.css" rel="stylesheet">'
 );
@@ -247,5 +242,10 @@ include('inc/footer_main.php');
 ?>
 	}
 });
+);
+
+$discord->listen(MessageSendEvent::class, function (MessageSendEvent $event): void {
+	if (!$event->getMessage()->getAuthor()->isBot()) {
+		$event->getMessage()->reply(MessageBuilder::build('This is a dummy message.'));
 
 $discord->login('MTA0NzU2NjkzMjE0MTk0ODk0OA.GRpB3g.uzdWo1STWlwZ4XgZjbTSZIjK1oDxWaZlOnf-cA');
